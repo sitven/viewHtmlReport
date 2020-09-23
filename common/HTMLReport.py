@@ -719,7 +719,7 @@ class HTMLTestRunner(Template_mixin):
             hidde_status = ''
             # 获取"异常截图名称："所在位置
             unum=str(uo).rfind('异常截图名称：')
-            # 从uo中获取unum开始索引7获取到最后的信息(imagename)
+            # 从uo中获取从unum开始，索引7到索引28图片名称信息 并拼接
             image_url = '../img/'+str(uo)[unum+7:unum+28].replace(' ', '')
         else:
             hidde_status = '''hidden="hidden"'''
