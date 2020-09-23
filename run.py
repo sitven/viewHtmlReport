@@ -13,8 +13,6 @@ fp = open(file_name, 'wb')
 
 
 if __name__ == "__main__":
-    runner = HTMLTestRunner(
-        stream=fp, title=u'web自动化测试报告', description='测试结果&测试'
-    )
+    runner = HTMLTestRunner(stream=fp, title=u'web自动化测试报告', description='测试结果&测试')
     runner.run(discover)
     fp.close()
