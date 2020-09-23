@@ -44,7 +44,7 @@ class Test(unittest.TestCase):
             timeStrmap = time.strftime('%Y%m%d_%H_%M_%S')
             img_name = os.path.join(img_path, "%s.png" % str(timeStrmap))
             self.driver.get_screenshot_as_file(img_name)
-            Log().info(message="异常截图名称：%shhh" % os.path.split(img_name)[1])
+            Log().info(message="异常截图名称：%s" % os.path.split(img_name)[1])
             raise
 
     def test_002(self):
@@ -70,7 +70,7 @@ class Test(unittest.TestCase):
         except Exception as e:
             timeStrmap = time.strftime('%Y%m%d_%H_%M_%S')
             img_name = os.path.join(img_path, "%s.png" % str(timeStrmap))
-            Log().info(message=" 异常截图保存路径: %s  异常截图名称：%shhhh" % (img_path, os.path.split(img_name)[1]))
+            Log().info(message=" 异常截图保存路径: %s  异常截图名称：%s" % (img_path, os.path.split(img_name)[1]))
             self.driver.get_screenshot_as_file(img_name)
             raise
 
