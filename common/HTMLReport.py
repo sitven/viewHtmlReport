@@ -713,13 +713,12 @@ class HTMLTestRunner(Template_mixin):
             output = saxutils.escape(uo+ue),
         )
         # 插入图片
-        from common.log import Log
         unum = str(uo).rfind('异常截图名称：')
         if ((uo or ue) and unum !=-1):
             hidde_status = ''
             # 获取"异常截图名称："所在位置
             unum=str(uo).rfind('异常截图名称：')
-            # 从uo中获取从unum开始，索引7到索引28图片名称信息 并拼接
+            # 从uo中获取从unum开始，从索引位置7到28的图片名称并拼接出相对位置的图片路径
             image_url = '../img/'+str(uo)[unum+7:unum+28].replace(' ', '')
         else:
             hidde_status = '''hidden="hidden"'''
