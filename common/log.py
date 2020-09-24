@@ -1,6 +1,6 @@
 #!/usr/bin/python3.6
 # coding=utf-8
-# Author: 文
+# Author: Sitven
 
 import os
 import logging
