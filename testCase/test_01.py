@@ -39,7 +39,7 @@ class Test(unittest.TestCase):
             title = self.driver.title
             Log().info(" 获得当前页面标题：%s" % title)
             time.sleep(2)
-            self.assertEqual("百度一下", title, msg="断言失败，页面期望标题 != 实际标签")
+            assert "百度一下", title
         except Exception as e:
             timeStrmap = time.strftime('%Y%m%d_%H_%M_%S')
             img_name = os.path.join(img_path, "%s.png" % str(timeStrmap))
@@ -66,7 +66,7 @@ class Test(unittest.TestCase):
             title = self.driver.title
             Log().info(" 获得当前页面标题：%s" % title)
             time.sleep(2)
-            self.assertEqual("Appium_百度搜索", title, msg="断言失败，页面期望标题 != 实际标签")
+            assert "Appium_百度搜索", title
         except Exception as e:
             timeStrmap = time.strftime('%Y%m%d_%H_%M_%S')
             img_name = os.path.join(img_path, "%s.png" % str(timeStrmap))
